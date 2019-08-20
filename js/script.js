@@ -1,15 +1,12 @@
-function vowel_count(str1)
+function leapYear()
 {
-    var vowel_list = 'aeiouAEIOU';
-    var vcount = 0;
+    var year=parseFloat(document.getElementById("year").value);
 
-    for(var x = 0; x < str1.length; x++ )
+    if (year % 4 == 0 && year % 100 != 0)
     {
-        if (vowel_list.indexOf(str1[x]) !==-1)
-        {
-            vcount +=1;
-        }
+        alert("It's a leap year");
+    }else if (year % 400 == 0)
+    {
+        alert("Not a  leap year");
     }
-    return vcount;
 }
-console.log(vowel_count("The quick brown fox"));
